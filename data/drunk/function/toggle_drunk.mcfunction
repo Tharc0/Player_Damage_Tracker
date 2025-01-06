@@ -1,0 +1,4 @@
+scoreboard players add #global_drunk drunk_switch 1
+execute if score #global_drunk drunk_switch matches 2 run scoreboard players set #global_drunk drunk_switch 0
+execute if score #global_drunk drunk_switch matches 0 run tellraw @s {"text":"Global Drunk Tracker is disabled!","bold":true,"italic":true,"color":"dark_red","clickEvent":{"action":"run_command","value":"/function drunk:toggle_drunk"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click to toggle drunk tracker","color":"gray"}]}}
+execute if score #global_drunk drunk_switch matches 1 run tellraw @s {"text":"Global Drunk Tracker is enabled!","bold":true,"italic":true,"color":"dark_green","clickEvent":{"action":"run_command","value":"/function drunk:toggle_drunk"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click to toggle drunk tracker","color":"gray"}]}}

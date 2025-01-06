@@ -1,0 +1,7 @@
+{
+    "criteria": {
+        "player_damaged": {
+            "trigger":  "minecraft:entity_hurt_player"
+        }
+    }
+}

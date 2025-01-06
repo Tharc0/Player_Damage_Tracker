@@ -1,0 +1,5 @@
+scoreboard players set #global_stats_switch stats_switch 1
+scoreboard players add #global_stats_switch stats_switch 1
+execute if score #global_stats_switch stats_switch = 2 const run scoreboard players set #global_stats_switch stats_switch 0
+execute if score #global_stats_switch stats_switch = 0 const run tellraw @s {"text":"Global Stats Tracker is disabled!","bold":true,"italic":true,"color":"dark_red","clickEvent":{"action":"run_command","value":"/function stats:toggle_tracker"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click to toggle stats tracker","color":"gray"}]}}
+execute if score #global_stats_switch stats_switch = 1 const run tellraw @s {"text":"Global Stats Tracker is enabled!","bold":true,"italic":true,"color":"dark_green","clickEvent":{"action":"run_command","value":"/function stats:toggle_tracker"},"hoverEvent":{"action":"show_text","contents":[{"text":"Click to toggle stats tracker","color":"gray"}]}}
