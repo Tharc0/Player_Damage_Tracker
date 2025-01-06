@@ -36,3 +36,5 @@ execute if score #cycle_counter counter matches 35 run scoreboard objectives set
 
 # Back to the beginning
 execute if score #cycle_counter counter matches 36.. run scoreboard players set #cycle_counter counter 1
+# and to the end
+execute if score #cycle_counter counter matches ..0 run scoreboard players set #cycle_counter counter 35
